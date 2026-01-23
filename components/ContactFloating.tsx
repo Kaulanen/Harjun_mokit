@@ -7,9 +7,9 @@ export default function ContactFloating() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-20 right-3 z-[9999]">
+    <div className="fixed bottom-20 left-3 z-[9999]">
 
-      {/* Kelluva nappi (näkyy aina mobiilissa, desktopissa piilotettu) */}
+      {/* Kelluva nappi mobiilissa */}
       <button
         onClick={() => setOpen(!open)}
         className="md:hidden bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition"
@@ -26,7 +26,6 @@ export default function ContactFloating() {
           md:opacity-100 md:pointer-events-auto md:translate-y-0 md:block
         `}
       >
-        {/* Numero 1 */}
         <a
           href="tel:+358400290582"
           className="flex items-center space-x-2 text-gray-800 hover:text-green-700 transition"
@@ -35,7 +34,6 @@ export default function ContactFloating() {
           <span className="font-medium">+358 400 290 582</span>
         </a>
 
-        {/* Numero 2 */}
         <a
           href="tel:+358504945709"
           className="flex items-center space-x-2 text-gray-800 hover:text-green-700 transition"
@@ -44,7 +42,6 @@ export default function ContactFloating() {
           <span className="font-medium">+358 50 494 5709</span>
         </a>
 
-        {/* Sähköposti */}
         <a
           href="mailto:harjun.mokit@gmail.com"
           className="flex items-center space-x-2 text-gray-800 hover:text-green-700 transition"
