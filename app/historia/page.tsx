@@ -54,8 +54,7 @@ export default function HistoriaPage() {
 
               {/* perhe */}
         <div className="text-center space-y-4">
-          <div className="min-h-150 mx-auto relative rounded-xs overflow-hidden shadow-lg
-          transition-transform duration-500 hover:scale-[1.1] cursor-pointer ">
+          <div className="relative mx-auto rounded-lg overflow-hidden shadow-lg aspect-[4/3] transition-transform duration-500 hover:scale-[1.1] cursor-pointer">
             <Image
               src="/PantsarPieni.jpg"
               alt="Pantsarit"
@@ -63,6 +62,7 @@ export default function HistoriaPage() {
               className="object-cover"
             />
           </div>
+
           <h3 className="text-2xl font-semibold">Pantsarit</h3>
           <p className="text-gray-600"></p>
         </div>
