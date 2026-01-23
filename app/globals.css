@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Päävärit */
+  --background: #f3eedf;      /* lämmin luonnonvalkoinen */
+  --foreground: #1F1F1F;      /* pehmeä tumma harmaa */
+
+  /* Korostusvärit */
+  --accent: #2F5D50;          /* metsänvihreä */
+  --accent-light: #4F7F6A;    /* sammal */
+  --accent-soft: #E8EFEA;     /* hyvin vaalea vihertävä tausta */
+
+  /* Luonnon sävyt */
+  --wood: #A68A6D;            /* lämmin puunsävy */
+  --wood-light: #D8C7B3;      /* vaalea puunsävy */
+
+  /* Rajat ja varjot */
+  --border: #D9D6CE;          /* pehmeä harmaanbeige */
+  --shadow: rgba(0, 0, 0, 0.08);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-soft: var(--accent-soft);
+  --color-wood: var(--wood);
+  --color-wood-light: var(--wood-light);
+  --color-border: var(--border);
+  --shadow-soft: var(--shadow);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes flame {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.4) rotate(-5deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .animate-flame {
+    animation: flame 0.6s ease-in-out;
+  }
+
+  .hover-flame:hover .flame-icon {
+    animation: flame 0.6s ease-in-out;
+  }
 }
