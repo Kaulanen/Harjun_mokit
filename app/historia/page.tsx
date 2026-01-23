@@ -63,7 +63,7 @@ export default function HistoriaPage() {
             />
           </div>
 
-          <h3 className="text-2xl font-semibold">Pantsarit</h3>
+          <h3 className="text-2xl font-semibold">Aleksi, Olivia, Virpi ja Vesa Pantsar sekä Pyry ja Havu</h3>
           <p className="text-gray-600"></p>
         </div>
     </main>
