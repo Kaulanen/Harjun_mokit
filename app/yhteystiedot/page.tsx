@@ -3,7 +3,12 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Send } from "lucide-react"
-import Map from "@/components/Map"
+import dynamic from "next/dynamic"
+
+const Map = dynamic(() => import("@/components/Map"), {
+  ssr: false
+})
+
 import VideoSection from "@/components/VideoSection"
 
 export default function YhteystiedotPage() {
