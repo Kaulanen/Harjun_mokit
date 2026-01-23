@@ -7,7 +7,7 @@ import Map from "@/components/Map"
 import VideoSection from "@/components/VideoSection"
 
 export default function YhteystiedotPage() {
-  const [seasonImage, setSeasonImage] = useState("/kesakuva.jpg")
+  const [seasonImage, setSeasonImage] = useState("/harjukesa.jpg")
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
 
   // Valitse kuva vuodenajan mukaan
