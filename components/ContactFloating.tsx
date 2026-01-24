@@ -7,7 +7,7 @@ export default function ContactFloating() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-20 left-3 z-[9999]">
+    <div className="fixed bottom-20 right-3 z-[9999]">
 
       {/* Mobiilin kelluva nappi */}
       <button
