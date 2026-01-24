@@ -40,14 +40,14 @@ export default function AjankohtaistaFloating() {
 
   return (
     <div 
-      className="fixed bottom-60 right-6 z-50 group"
+      className="fixed bottom-60 right-3 z-50 group"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       onClick={() => setOpen(!open)} // mobiilia varten
     >
       {/* Kelluva nappi */}
-      <div className="bg-yellow/20 backdrop-blur-md text-yellow-500 hover:bg-yellow-600 text-white p-4 rounded-full shadow-lg cursor-pointer transition">
-        <Info className="w-6 h-6" />
+      <div className="bg-yellow-500 backdrop-blur-md text-white hover:bg-yellow-600 text-white p-4 rounded-full shadow-lg cursor-pointer transition">
+        <Info className="w-5 h-5" />
       </div>
 
       {/* Hoverilla avautuva laatikko */}
