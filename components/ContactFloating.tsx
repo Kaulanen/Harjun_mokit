@@ -7,9 +7,9 @@ export default function ContactFloating() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="fixed bottom-20 right-1 z-[9999]">
+    <div className="fixed bottom-20 right-3 z-[9999]">
 
-      {/* Mobiilin kelluva nappi (oikealla) */}
+      {/* Mobiilin kelluva nappi */}
       <button
         onClick={() => setOpen(!open)}
         className="md:hidden bg-green-600/40 backdrop-blur-md text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition"
@@ -20,14 +20,15 @@ export default function ContactFloating() {
       {/* Yhteystietolaatikko */}
       <div
         className={`
-          bg-white/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-xl px-4 py-3 
+          bg-white/70 backdrop-blur-md border border-gray-200 shadow-lg rounded-xl px-4 py-3 
           flex flex-col space-y-3 transition-all duration-300
 
-          /* Mobiilin avautuminen */
-          ${open ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none translate-y-2"}
+          /* Mobiilin liuku-animaatio */
+          absolute right-0
+          ${open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}
 
-          /* Desktopissa aina näkyvissä oikealla */
-          md:opacity-100 md:pointer-events-auto md:translate-y-0 md:block
+          /* Desktopissa aina näkyvissä */
+          md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:block
         `}
       >
         <a
