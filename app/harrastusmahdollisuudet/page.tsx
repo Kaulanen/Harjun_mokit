@@ -21,7 +21,6 @@ export default function HarrastusmahdollisuudetPage() {
         text="Valaistut ladut lähtevät vain 50 metrin päästä mökeiltä. Ylläksen laaja latuverkosto tarjoaa reittejä niin aloittelijoille kuin kokeneille hiihtäjille. Lenkiltä on helppo palata suoraan mökin lämpimään saunaan."
         image="/hiihto1.jpg"
         images={[
-          "/hiihto1.jpg", 
           "/hiihto2.jpg"
         ]}
       />
@@ -73,9 +72,8 @@ export default function HarrastusmahdollisuudetPage() {
       <HarrastusKortti
         title="Ruska ja kesä"
         text="Ylläs on yksi Suomen suosituimmista ruska-kohteista. Nauti vaellusreiteistä, pyöräilystä ja valokuvauksesta luonnon väriloistossa."
-        image="/pitkosp.jpg"
+        image="/kesa4.jpg"
         images={[
-          "/kesa4.jpg",
           "/pyorakesa.jpg",
           "/kesa.jpg",
           "/kesa2.jpg",

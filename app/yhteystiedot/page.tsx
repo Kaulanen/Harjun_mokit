@@ -12,16 +12,16 @@ const Map = dynamic(() => import("@/components/Map"), {
 import VideoSection from "@/components/VideoSection"
 
 export default function YhteystiedotPage() {
-  const [seasonImage, setSeasonImage] = useState("/harjukesa.jpg")
+  const [seasonImage, setSeasonImage] = useState("/mokki1-2.jpg")
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
 
   // Valitse kuva vuodenajan mukaan
   useEffect(() => {
     const month = new Date().getMonth() + 1
     if (month >= 5 && month <= 10) {
-      setSeasonImage("/harjukesa.jpg") // Touko–Lokakuu
+      setSeasonImage("/mokki1-2.jpg") // Touko–Lokakuu
     } else {
-      setSeasonImage("/harjutalvi.jpg") // Marras–Huhtikuu
+      setSeasonImage("/mokki1-1.jpg") // Marras–Huhtikuu
     }
   }, [])
 

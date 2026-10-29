@@ -4,6 +4,13 @@ import "yet-another-react-lightbox/plugins/thumbnails.css"
 import Header from "@/components/Header"
 import ContactFloating from "@/components/ContactFloating"
 import Footer from "@/components/Footer"
+import { Caveat } from "next/font/google"
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-caveat",
+})
 
 export const metadata = {
   title: "Harjun Mökit",
@@ -13,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fi">
-      <body className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
+      <body className={`${caveat.variable} bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col`}>
         
         <Header />
 
