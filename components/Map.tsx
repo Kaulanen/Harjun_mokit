@@ -21,7 +21,8 @@ export default function Map() {
       className="h-[350px] md:h-[450px] w-full rounded-xl shadow-lg"
     >
       <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
       />
       <Marker position={[67.6165064, 24.154899]} icon={markerIcon}>
         <Popup>Heinolantie 5, Äkäslompolo</Popup>

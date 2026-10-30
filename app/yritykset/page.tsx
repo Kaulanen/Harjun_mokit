@@ -1,4 +1,3 @@
-import { log } from "console";
 import Image from "next/image";
 
 export default function YrityksetPage() {
@@ -96,13 +95,13 @@ export default function YrityksetPage() {
                 href={y.linkki}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-6 p-6 rounded-lg border border-gray-300 shadow-sm hover:shadow-md transition-shadow duration-300 hover:bg-gray-50"
+                className="flex flex-col items-center gap-4 rounded-lg border border-gray-300 p-4 text-center shadow-sm transition-shadow duration-300 hover:bg-gray-50 hover:shadow-md sm:flex-row sm:gap-6 sm:p-6 sm:text-left"
                 >
                 {/* Logo */}
                 {y.logo && (
                 <div
                     className={
-                        `relative w-30 h-30 flex-shrink-0 py-3 rounded-lg overflow-hidden 
+                        `relative h-30 w-30 flex-shrink-0 py-3 rounded-lg overflow-hidden
                         group-hover:shadow-lg transition-shadow duration-300 hover:bg-gray-300 hover:scale-105 
                         ${y.tausta ?? "bg-gray-100"}
                         `}
@@ -119,8 +118,8 @@ export default function YrityksetPage() {
 
                 {/* Tekstit */}
                 <div>
-                    <h2 className="text-2xl font-semibold">{y.nimi}</h2>
-                    <p className="text-gray-600 mt-1">{y.kuvaus}</p>
+                    <h2 className="text-xl font-semibold sm:text-2xl">{y.nimi}</h2>
+                    <p className="mt-1 break-words text-gray-600">{y.kuvaus}</p>
                 </div>
                 </a>
             ))}

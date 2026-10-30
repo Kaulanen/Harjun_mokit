@@ -8,7 +8,7 @@ export default function HarrastusmahdollisuudetPage() {
 
       {/* Hero */}
       <section className="text-center space-y-6 max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold">Harrastusmahdollisuudet</h1>
+        <h1 className="break-words text-3xl font-bold sm:text-4xl">Harrastusmahdollisuudet</h1>
         <p className="text-lg text-gray-700">
           Ylläksen alue tarjoaa ympäri vuoden monipuolisia harrastusmahdollisuuksia aivan mökkien vieressä.
           Talvella hiihto, lumikenkäily ja laskettelu, kesällä pyöräily, melonta ja vaellus. Lajikokeiluja voi tehdä matalalla kynnyksellä mutta pelkkä rauhoittuminenkin hiljaisuudessa luonnon keskellä on elämys itsessään.

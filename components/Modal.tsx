@@ -17,16 +17,17 @@ export default function Modal({
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 backdrop-blur/10 flex items-center justify-center z-50"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur/10"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-xl p-18 max-w-md w-full shadow-xl relative"
+        className="relative max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto rounded-xl bg-white p-5 shadow-xl sm:p-8"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+          aria-label="Sulje ikkuna"
         >
           ✕
         </button>

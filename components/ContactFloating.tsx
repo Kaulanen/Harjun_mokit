@@ -13,6 +13,8 @@ export default function ContactFloating() {
       <button
         onClick={() => setOpen(!open)}
         className="md:hidden bg-green-600/40 backdrop-blur-md text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition"
+        aria-label={open ? "Sulje yhteystiedot" : "Näytä yhteystiedot"}
+        aria-expanded={open}
       >
         <Phone className="w-6 h-6" />
       </button>
@@ -24,11 +26,11 @@ export default function ContactFloating() {
           flex flex-col space-y-3 transition-all duration-300
 
           /* Mobiilin liuku-animaatio */
-          absolute right-0
-          ${open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"}
+          absolute right-0 bottom-full mb-3 max-w-[calc(100vw-1.5rem)]
+          ${open ? "visible translate-y-0 opacity-100 pointer-events-auto" : "invisible translate-y-2 opacity-0 pointer-events-none"}
 
           /* Desktopissa aina näkyvissä */
-          md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:block
+          md:static md:visible md:translate-y-0 md:opacity-100 md:pointer-events-auto md:mb-0 md:max-w-none
         `}
       >
         <a
@@ -52,7 +54,7 @@ export default function ContactFloating() {
           className="flex items-center space-x-2 text-gray-800 hover:text-green-700 transition"
         >
           <Mail className="w-5 h-5" strokeWidth={1.75} />
-          <span className="font-medium">harjun.mokit@gmail.com</span>
+          <span className="font-medium break-all">harjun.mokit@gmail.com</span>
         </a>
       </div>
     </div>

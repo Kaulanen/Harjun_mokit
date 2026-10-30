@@ -19,9 +19,9 @@ export default function YhteystiedotPage() {
   useEffect(() => {
     const month = new Date().getMonth() + 1
     if (month >= 5 && month <= 10) {
-      setSeasonImage("/mokki1-2.jpg") // Touko–Lokakuu
+      setSeasonImage("/mokki1-2.jpg")
     } else {
-      setSeasonImage("/mokki1-1.jpg") // Marras–Huhtikuu
+      setSeasonImage("/mokki1-1.jpg")
     }
   }, [])
 
@@ -65,7 +65,7 @@ export default function YhteystiedotPage() {
 
   {/* Tekstit (jos haluat) */}
   <div className="absolute left-1/2 top-[21%] -translate-x-1/2">
-    <h1 className="text-6xl md:text-6xl font-bold text-gray-600 drop-shadow-lg">
+    <h1 className="px-4 text-center text-4xl font-bold text-gray-600 drop-shadow-lg sm:text-5xl md:text-6xl">
       Yhteystiedot
     </h1>
   </div>
@@ -74,7 +74,7 @@ export default function YhteystiedotPage() {
 
 
       {/* Otsikko */}
-      <section className="text-center space-y-4">
+      <section className="space-y-4 px-4 text-center">
         <h1 className="text-4xl font-bold tracking-tight"></h1>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
           Ota yhteyttä ja kysy lisää majoituksesta, varauksista tai alueen harrastusmahdollisuuksista.
@@ -83,9 +83,9 @@ export default function YhteystiedotPage() {
       </section>
 
       {/* Yhteystietokortit */}
-      <section className="grid md:grid-cols-3 gap-10">
+      <section className="grid gap-6 px-4 md:grid-cols-3 md:gap-10">
 
-        <div className="bg-white shadow-md rounded-xl p-8 text-center space-y-4">
+        <div className="space-y-4 rounded-xl bg-white p-6 text-center shadow-md sm:p-8">
           <Phone className="w-10 h-10 mx-auto text-gray-700" strokeWidth={1.5} />
           <h2 className="text-xl font-semibold">Puhelin</h2>
           <p className="text-gray-700 leading-relaxed">
@@ -94,7 +94,7 @@ export default function YhteystiedotPage() {
           </p>
         </div>
 
-        <div className="bg-white shadow-md rounded-xl p-8 text-center space-y-4">
+        <div className="space-y-4 rounded-xl bg-white p-6 text-center shadow-md sm:p-8">
           <Mail className="w-10 h-10 mx-auto text-gray-700" strokeWidth={1.5} />
           <h2 className="text-xl font-semibold">Sähköposti</h2>
           <p className="text-gray-700 leading-relaxed">
@@ -102,7 +102,7 @@ export default function YhteystiedotPage() {
           </p>
         </div>
 
-        <div className="bg-white shadow-md rounded-xl p-8 text-center space-y-4">
+        <div className="space-y-4 rounded-xl bg-white p-6 text-center shadow-md sm:p-8">
           <MapPin className="w-10 h-10 mx-auto text-gray-700" strokeWidth={1.5} />
           <h2 className="text-xl font-semibold">Osoite</h2>
           <p className="text-gray-700 leading-relaxed">
@@ -116,7 +116,7 @@ export default function YhteystiedotPage() {
       </section>
 
       {/* Yhteydenottolomake */}
-      <section className="bg-white shadow-lg rounded-xl p-10 space-y-8">
+      <section className="space-y-8 rounded-xl bg-white p-5 shadow-lg sm:p-8">
         <h2 className="text-2xl font-bold text-center">Lähetä viesti</h2>
 
         <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto">
@@ -184,7 +184,7 @@ export default function YhteystiedotPage() {
       </section>
 
       {/* Kartta */}
-      <section className="space-y-6">
+      <section className="space-y-6 px-4">
         <h2 className="text-2xl font-bold text-center">Sijainti</h2>
 
         <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg">

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-import { Flame, FlameIcon, Icon } from "lucide-react"
+import { Flame } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 export default function Header() {
@@ -30,10 +30,9 @@ export default function Header() {
             alt="Harjun Mökit logo"
             className="w-8 h-8 md:w-10 md:h-10 object-cover rounded-md"
           />
-          {/* Teksti näkyy vain sm-breakpointista ylöspäin */}
           <Link 
             href="/" 
-            className="hidden sm:block text-xl font-bold tracking-tight whitespace-nowrap"
+            className="text-sm sm:text-xl font-bold tracking-tight whitespace-nowrap"
           >
             Harjun mökit
           </Link>
@@ -72,6 +71,9 @@ export default function Header() {
         <button
           className="md:hidden"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Sulje valikko" : "Avaa valikko"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? (
             <XMarkIcon className="w-7 h-7 text-gray-700" />
@@ -83,7 +85,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-t">
+        <div id="mobile-navigation" className="md:hidden bg-white border-t">
           <nav className="flex flex-col p-4 space-y-4">
             {navItems.map((item) => (
               <Link

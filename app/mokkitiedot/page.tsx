@@ -10,7 +10,6 @@ import VarusteluIkonit from "@/components/Varustus"
 import VuokrausIkonit from "@/components/VuokrausIkonit"
 import LisapalvelutIkonit from "@/components/LisapalvelutIkonit"
 import Modal from "@/components/Modal"
-import MokkiHuoneet from "@/components/MokkiHuoneet"
 import AjankohtaistaFloating from "@/components/AjankohtaistaFloating"
 
 const images = [
@@ -39,9 +38,12 @@ export default function MokkitiedotPage() {
 
   // Modal
   const [modalOpen, setModalOpen] = useState(false)
-  const [modalData, setModalData] = useState({ title: "", body: null })
+  const [modalData, setModalData] = useState<{
+    title: string
+    body: React.ReactNode
+  }>({ title: "", body: null })
 
-  const openModal = (data: any) => {
+  const openModal = (data: { title: string; body: React.ReactNode }) => {
     setModalData(data)
     setModalOpen(true)
   }
@@ -111,7 +113,7 @@ export default function MokkitiedotPage() {
       <AjankohtaistaFloating />
 
       {/* Täysleveä tausta: Vuokraus + Lisäpalvelut */}
-      <section className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white/40 py-16">
+      <section className="-mx-4 bg-white/40 py-16">
         <div className="max-w-5xl mx-auto px-4 space-y-16">
 
           <VuokrausIkonit onOpen={openModal} />
